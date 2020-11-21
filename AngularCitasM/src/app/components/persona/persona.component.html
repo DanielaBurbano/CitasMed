@@ -1,0 +1,15 @@
+<section>
+    <h1>¡Registrate!</h1>
+    <div class="FormPer">
+      <div class="DatosForm">
+        <label>E-mail</label>
+        <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="ema_per">
+      </div>
+      <div class="DatosForm">
+        <label>Contraseña</label>
+        <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per">
+      </div>
+    </div>
+    
+    <button (click)="addPersona()" class="btn btn-primary Btnadd">Agregar</button>
+  </section>
