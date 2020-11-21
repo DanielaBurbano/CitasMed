@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularfirebase-a20e7": {
+      "hosting": {
+        "AngularCitasM": [
+          "angularfirebase-a20e7"
+        ]
+      }
+    }
+  }
+}
