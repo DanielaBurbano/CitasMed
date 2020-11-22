@@ -13,13 +13,22 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
 import { NavComponent } from './components/nav/nav.component';
+import { RolComponent } from './components/rol/rol.component';
+import { EstadoComponent } from './components/estado/estado.component';
+import { AddEditRolComponent } from './components/rol/add-edit-rol/add-edit-rol.component';
+import { AddEditEstadoComponent } from './components/estado/add-edit-estado/add-edit-estado.component';
+import { SharedService } from './services/shared.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonaComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    RolComponent,
+    EstadoComponent,
+    AddEditRolComponent,
+    AddEditEstadoComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +39,7 @@ import { NavComponent } from './components/nav/nav.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -134,5 +134,8 @@
       }
     }
   },
-  "defaultProject": "AngularCitasM"
+  "defaultProject": "AngularCitasM",
+  "cli": {
+    "analytics": false
+  }
 }

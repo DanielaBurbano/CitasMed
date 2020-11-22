@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'rest_framework'
+    'rest_framework',
+    'CitasM.apps.CitasmConfig',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
