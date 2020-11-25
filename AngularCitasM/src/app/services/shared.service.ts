@@ -49,5 +49,19 @@ readonly APIUrl = "http://127.0.0.1:8000";
 
 
 
-  
+  getPersonaList():Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl + '/personas/');
+  }
+
+  addPersona(val:any){
+    return this.http.post(this.APIUrl + '/persona/',val);
+  }
+
+  updatePersona(val:any){
+    return this.http.put(this.APIUrl + '/persona/',val);
+  }
+
+  deletePersona(val:any){
+    return this.http.delete(this.APIUrl + '/persona/'+val);
+  }
 }

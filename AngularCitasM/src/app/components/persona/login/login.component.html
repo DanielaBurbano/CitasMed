@@ -3,13 +3,13 @@
     <div class="FormPer">
       <div class="DatosForm">
         <label>E-mail</label>
-        <input type="text" class="form-control" placeholder="E-mail" >
+        <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="ema_per">
       </div>
       <div class="DatosForm">
         <label>Contraseña</label>
-        <input type="password" class="form-control" placeholder="Contraseña">
+        <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per">
       </div>
     </div>
     
-    <button  class="btn btn-primary Btnadd">Agregar</button>
+    <button (click)="loginPersona()"  class="btn btn-primary Btnadd">Ingresar</button>
   </section>

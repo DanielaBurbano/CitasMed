@@ -1,15 +1,33 @@
 <section>
-    <h1>¡Registrate!</h1>
-    <div class="FormPer">
-      <div class="DatosForm">
-        <label>E-mail</label>
-        <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="ema_per">
-      </div>
-      <div class="DatosForm">
-        <label>Contraseña</label>
-        <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per">
-      </div>
+
+  <h1>¡Registrate!</h1>
+  <div class="FormPer">
+    <div class="DatosForm">
+      <label>Cedula</label>
+      <input type="text" class="form-control" placeholder="Cedula" [(ngModel)]="ced_per">
     </div>
-    
-    <button (click)="addPersona()" class="btn btn-primary Btnadd">Agregar</button>
-  </section>
+    <div class="DatosForm">
+      <label>Nombre</label>
+      <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nom_per">
+    </div>
+    <div class="DatosForm">
+      <label>Fecha Nacimiento</label>
+      <input type="date" class="form-control" [(ngModel)]="fna_per">
+    </div>
+    <div class="DatosForm">
+      <label>Dirección</label>
+      <input type="text" class="form-control" placeholder="Dirección" [(ngModel)]="dir_per">
+    </div>
+    <div class="DatosForm">
+      <label>E-mail</label>
+      <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="ema_per">
+    </div>
+    <div class="DatosForm">
+      <label>Contraseña</label>
+      <input type="text" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per">
+    </div>
+  </div>
+  
+  <button (click)="addPersona()" *ngIf="per.cod_per==0" class="btn btn-primary Btnadd">Agregar</button>
+
+</section>
