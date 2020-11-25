@@ -18,6 +18,7 @@ import { EstadoComponent } from './components/estado/estado.component';
 import { AddEditRolComponent } from './components/rol/add-edit-rol/add-edit-rol.component';
 import { AddEditEstadoComponent } from './components/estado/add-edit-estado/add-edit-estado.component';
 import { SharedService } from './services/shared.service';
+import { AdminPerComponent } from './components/persona/admin-per/admin-per.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SharedService } from './services/shared.service';
     RolComponent,
     EstadoComponent,
     AddEditRolComponent,
-    AddEditEstadoComponent
+    AddEditEstadoComponent,
+    AdminPerComponent
   ],
   imports: [
     BrowserModule,
