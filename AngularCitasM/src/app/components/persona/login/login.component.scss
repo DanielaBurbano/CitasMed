@@ -12,19 +12,28 @@ h1{
     text-align: justify;
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    height: 70%;
-    align-content: flex-start;
+    width: 500px;
+    height: 250px;
 }
 
 .DatosForm{
     display: block;
-    width: 400px;
-    height: 100px;
+    width: 80%;
+    height: 70px;
     margin: auto;
 }
 
+.DatosForm2{
+    text-align: center;
+    display: block;
+    width: 80%;
+    height: 60px;
+    margin: auto;
+    margin-top: 0px;
+}
+
 .Btnadd{
-    margin-left: 80%;
-    margin-bottom: 50px;
+    width: 90%;
+    height: 50px;
+    margin-top: 5px;
 }

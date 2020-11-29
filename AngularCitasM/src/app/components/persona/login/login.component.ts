@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  public isLogged = false;
   constructor(private authS: AuthService, private router: Router) { }
 
   @Input() per:any;
@@ -37,6 +37,12 @@ export class LoginComponent implements OnInit {
     var firepassword  = this.pas_per;
     try {
       const user = await this.authS.login(fireemail, firepassword);
+      if(user){
+        this.router.navigate(['index']);
+      }
+      else{
+        alert("usuario o contraseña invalidos");
+      }
     } catch (error) {
       console.log(error);
     }

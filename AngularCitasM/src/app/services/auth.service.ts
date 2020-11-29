@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-
+import { map } from 'rxjs/operators';
 import { first } from 'rxjs/operators';
 
 
@@ -39,5 +39,9 @@ export class AuthService {
 
   getCurrentUser(){
     return this.afAuth.authState.pipe(first()).toPromise();
+  }
+
+  isAuth() {
+    return this.afAuth.authState.pipe(map(auth => auth));
   }
 }

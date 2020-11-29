@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -9,12 +10,22 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavComponent implements OnInit {
 
+
+  public user$: Observable<any> = this.authS.afAuth.user;
+
   constructor(private authS: AuthService, private router: Router) { }
 
   async ngOnInit() {
-    const user = await this.authS.getCurrentUser();
-    if(user){
-      console.log('User=>', user);
+  
+  }
+
+  async onLogout(){
+    
+    try {
+      await this.authS.logout();
+      this.router.navigate(['index']);
+    } catch (error) {
+      console.log(error);
     }
   }
 

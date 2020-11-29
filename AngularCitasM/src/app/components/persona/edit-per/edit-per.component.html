@@ -1,0 +1,44 @@
+<div class="FormPer">
+    <div class="DatosForm">
+      <label>Cedula</label>
+      <input type="text" class="form-control" placeholder="Cedula" [(ngModel)]="ced_per" readonly>
+    </div>
+    <div class="DatosForm">
+      <label>Nombre</label>
+      <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="nom_per">
+    </div>
+    <div class="DatosForm">
+      <label>Fecha Nacimiento</label>
+      <input type="date" class="form-control" [(ngModel)]="fna_per">
+    </div>
+    <div class="DatosForm">
+      <label>Dirección</label>
+      <input type="text" class="form-control" placeholder="Dirección" [(ngModel)]="dir_per">
+    </div>
+    <div class="DatosForm">
+      <label>E-mail</label>
+      <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="ema_per" readonly>
+    </div>
+    <div class="DatosForm">
+      <label>Contraseña</label>
+      <input type="text" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per" readonly>
+    </div>
+    <div class="DatosForm">
+      <label>Rol</label>
+      <select class="form-control"  [(ngModel)]="fk_perrol">
+        <option value="0">Seleccione</option>
+        <option *ngFor="let dataItem of RolList" value="{{dataItem.cod_rol}}">{{dataItem.des_rol}}</option>
+      </select>
+    </div>
+    <div class="DatosForm">
+      <label>Estado</label>
+      <select class="form-control" [(ngModel)]="fk_perest">
+        <option value="0">Seleccione</option>
+        <option *ngFor="let dataItem of EstadoList" value="{{dataItem.cod_est}}">{{dataItem.des_est}}</option>
+      </select>
+    </div>
+</div>
+
+<button (click)="updatePer()" *ngIf="per.cod_per!=0" class="btn btn-primary">
+    Actualizar
+</button>

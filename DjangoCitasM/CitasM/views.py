@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import RolSerializer, EstadoSerializer, PersonaSerializer, PersonasSerializer
-from .models import Roles, Estados, Personas
+from .serializers import RolSerializer, EstadoSerializer, PersonaSerializer, PersonasSerializer, DoctorSerializer, DoctoresSerializer
+from .models import Roles, Estados, Personas, Doctores
 
 
 class RolViewset(viewsets.ModelViewSet):
@@ -19,3 +19,13 @@ class PersonaViewset(viewsets.ModelViewSet):
 class PersonasViewset(viewsets.ModelViewSet):
     serializer_class = PersonasSerializer
     queryset = Personas.objects.all()
+    filterset_fields = ['ema_per', 'fk_perrol', 'ced_per']
+
+class DoctorViewset(viewsets.ModelViewSet):
+    serializer_class = DoctorSerializer
+    queryset = Doctores.objects.all()
+
+class DoctoresViewset(viewsets.ModelViewSet):
+    serializer_class = DoctoresSerializer
+    queryset = Doctores.objects.all()
+    filterset_fields = ['fk_docper']
