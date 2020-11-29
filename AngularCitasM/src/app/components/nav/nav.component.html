@@ -1,11 +1,24 @@
 <header>
-    <div class="contenedor">
-      <h1>Citas medicas</h1>
-      <nav class="menu">
-        <a class="nav-link" [routerLink]="['persona']">¡Registrate!</a>
+  <div class="contenedor">
+    <img src="../../assets/citasm.png" id="iconoc">
+    <h1>CitasMed</h1>
+    <input type="checkbox" id="menu-bar">
+    <label class="icon-menu" for="menu-bar">
+      <img src="../../assets/menub.png">
+    </label>
+    <nav class="menu">
+      <ul *ngIf="user$ | async as user; else login">
+        <a class="nav-link" [routerLink]="['index']" *ngIf="user">Home</a>
+        <a class="nav-link" [routerLink]="['miscitas']" *ngIf="user">Mis Citas</a>
+        <a class="nav-link" [routerLink]="['doctores']" *ngIf="user">Doctores</a>
+        <a class="nav-link"  *ngIf="user">{{user?.email}}</a>
+        <a class="nav-link" href="#" (click)="onLogout()" *ngIf="user">Logout</a>
+      </ul>
+      <ng-template #login>
+        <a class="nav-link" [routerLink]="['index']">Home</a>
         <a class="nav-link" [routerLink]="['login']">Login</a>
-        <a class="nav-link" [routerLink]="['rol']">Roles</a>
-        <a class="nav-link" [routerLink]="['estado']">Estados</a>
-      </nav>
-    </div>
+        <a class="nav-link" [routerLink]="['persona']">¡Registrate!</a>
+      </ng-template>
+    </nav>
+  </div>
 </header>

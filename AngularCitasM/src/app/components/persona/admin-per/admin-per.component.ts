@@ -131,5 +131,7 @@ export class AdminPerComponent implements OnInit {
     this.dir_per="";
     this.ema_per="";
     this.pas_per="";
+    this.fk_perest="0";
+    this.fk_perrol="0";
   }
 }

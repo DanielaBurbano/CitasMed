@@ -3,8 +3,28 @@
     margin: auto;
 }
 
+#menu-bar{
+    display: none;
+}
+
+#iconoc{
+margin-top: 5px;
+margin-right: 10px;
+float: left;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
+
 h1{
     float: left;
+}
+ul{
+    display: flex;
+    height: 50px;
+    margin-bottom: 0px;
 }
 
 header .contenedor{
@@ -14,7 +34,7 @@ header .contenedor{
 header{
     width: 100%;
     height: 50px;
-    background: #333;
+    background: #00B2A9;
     color: #fff;
     position: fixed;    /* Siempre fijo */
     top: 0;
@@ -29,7 +49,7 @@ header{
 header label{
     float: right;
     font-size: 28px;
-    margin: 6px 0;
+    margin: auto;
     cursor: pointer;
 }
 
@@ -39,7 +59,7 @@ header label{
     left: 0;
     width: 100%;
     height: 100vh;/* Ocupa siempre el tamaño total de la ventana */
-    background: rgba(51,51,51,0.9);
+    background: #00B2A9;
     transition: all 0.5s;
     transform: translateX(-100%);
 }
@@ -59,6 +79,10 @@ header label{
 
 #menu-bar:checked ~ .menu{
     transform: translateX(0%);
+    ul{
+        display: block;
+    }
+
 }
 
 @media(min-width:1024px){

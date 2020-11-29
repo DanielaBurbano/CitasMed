@@ -19,6 +19,8 @@ import { AddEditRolComponent } from './components/rol/add-edit-rol/add-edit-rol.
 import { AddEditEstadoComponent } from './components/estado/add-edit-estado/add-edit-estado.component';
 import { SharedService } from './services/shared.service';
 import { AdminPerComponent } from './components/persona/admin-per/admin-per.component';
+import { IndexComponent } from './components/index/index.component';
+import { EditPerComponent } from './components/persona/edit-per/edit-per.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AdminPerComponent } from './components/persona/admin-per/admin-per.comp
     EstadoComponent,
     AddEditRolComponent,
     AddEditEstadoComponent,
-    AdminPerComponent
+    AdminPerComponent,
+    IndexComponent,
+    EditPerComponent
   ],
   imports: [
     BrowserModule,

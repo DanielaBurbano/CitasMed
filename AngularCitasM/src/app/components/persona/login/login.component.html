@@ -1,15 +1,17 @@
 <section>
-    <h1>Inicia session!</h1>
-    <div class="FormPer">
-      <div class="DatosForm">
-        <label>E-mail</label>
-        <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="ema_per">
-      </div>
-      <div class="DatosForm">
-        <label>Contraseña</label>
-        <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per">
-      </div>
+  <h1>Inicia session!</h1>
+  <div class="FormPer">
+    <div class="DatosForm">
+      <label>E-mail</label>
+      <input type="text" class="form-control" placeholder="E-mail" [(ngModel)]="ema_per">
     </div>
-    
-    <button (click)="loginPersona()"  class="btn btn-primary Btnadd">Ingresar</button>
-  </section>
+    <div class="DatosForm">
+      <label>Contraseña</label>
+      <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per">
+    </div>
+    <div class="DatosForm2">
+      <button (click)="loginPersona()"  class="btn btn-primary Btnadd">Ingresar</button>
+    </div>
+  </div>
+  
+</section>

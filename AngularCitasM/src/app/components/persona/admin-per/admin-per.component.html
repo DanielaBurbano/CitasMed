@@ -9,7 +9,7 @@
               </button>
             </div>
             <div class="modal-body">
-                <app-add-edit-per [per]="per" *ngIf="ActivateAddEditPerComp"></app-add-edit-per>
+                <app-edit-per [per]="per" *ngIf="ActivateAddEditPerComp"></app-edit-per>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
       </div>
       <div class="DatosForm">
         <label>Contraseña</label>
-        <input type="text" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per">
+        <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="pas_per">
       </div>
       <div class="DatosForm">
         <label>Rol</label>
