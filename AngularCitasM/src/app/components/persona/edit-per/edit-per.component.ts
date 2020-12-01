@@ -92,7 +92,7 @@ export class EditPerComponent implements OnInit {
 
     this.service.updatePersona(val).subscribe(res=>{//Actualizar los datos
       //alert(res.toString());
-     // alert("Persona actualizada");
+      alert("Persona actualizada");
     });
   }
 

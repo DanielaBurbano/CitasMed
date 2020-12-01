@@ -33,6 +33,7 @@ export class AuthService {
 
     try{
       await this.afAuth.signOut();
+      localStorage.removeItem("email");
     }catch(error){
       console.log(error);
     }

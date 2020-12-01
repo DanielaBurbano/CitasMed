@@ -32,7 +32,7 @@ export class CitaComponent implements OnInit {
       fec_cit:"",
       fk_citper:"",
       fk_citdoc:"0",
-      obs_cit:""
+      obs_cit:"Ninguna"
     }
 
     this.cod_cit=this.cit.cod_cit;
@@ -77,6 +77,7 @@ export class CitaComponent implements OnInit {
 
       this.service.addCita(val).subscribe(data=>{
         alert("Cita registrada con exito");
+        this.refreshCitasList();
       });
   }
 
@@ -85,7 +86,7 @@ export class CitaComponent implements OnInit {
     this.service.getPersonaEmailList(localStorage.getItem("email")).subscribe(data=>{
       this.PersonaList=data;//Arreglo con datos de persona
       let v = Object.values(this.PersonaList[0]);//arreglo con datos de arreglo persona
-      let codigop = v[0];//dato1 del arreglo = cedula persona
+      let codigop = v[0];//dato1 del arreglo = codigo persona
       //console.log("Variable::    "+cedula);
       this.service.getCitaPerList(codigop).subscribe(data=>{
         this.CitaList=data;

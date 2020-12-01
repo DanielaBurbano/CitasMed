@@ -9,8 +9,7 @@
     <nav class="menu">
       <ul *ngIf="user$ | async as user; else login">
         <a class="nav-link" [routerLink]="['index']" *ngIf="user">Home</a>
-        <a class="nav-link" [routerLink]="['miscitas']" *ngIf="user">Mis Citas</a>
-        <a class="nav-link" [routerLink]="['doctores']" *ngIf="user">Doctores</a>
+        <a class="nav-link" [routerLink]="['citas']" *ngIf="user">Mis Citas</a>
         <a class="nav-link"  *ngIf="user">{{user?.email}}</a>
         <a class="nav-link" href="#" (click)="onLogout()" *ngIf="user">Logout</a>
       </ul>

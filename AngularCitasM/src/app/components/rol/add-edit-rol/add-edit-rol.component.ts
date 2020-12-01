@@ -23,7 +23,8 @@ export class AddEditRolComponent implements OnInit {
     var val = {cod_rol:this.cod_rol,
                 des_rol:this.des_rol};
     this.service.addRol(val).subscribe(res=>{
-      alert(res.toString());
+      //alert(res.toString());
+      alert("Rol creado con exito");
     });
   }
 
@@ -31,7 +32,8 @@ export class AddEditRolComponent implements OnInit {
     var val = {cod_rol:this.cod_rol,
       des_rol:this.des_rol};
     this.service.updateRol(val).subscribe(res=>{
-    alert(res.toString());
+      //alert(res.toString());
+      alert("Rol actualizado con exito");
     });
   }
 

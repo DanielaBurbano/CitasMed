@@ -23,7 +23,8 @@ export class AddEditEstadoComponent implements OnInit {
     var val = {cod_est:this.cod_est,
                 des_est:this.des_est};
     this.service.addEstado(val).subscribe(res=>{
-      alert(res.toString());
+      //alert(res.toString());
+      alert("Estado creado con exito");
     });
   }
 
@@ -31,7 +32,8 @@ export class AddEditEstadoComponent implements OnInit {
     var val = {cod_est:this.cod_est,
       des_est:this.des_est};
     this.service.updateEstado(val).subscribe(res=>{
-    alert(res.toString());
+    //alert(res.toString());
+    alert("Estado actualizado con exito");
     });
   }
 

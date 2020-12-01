@@ -10,14 +10,13 @@ import { SharedService } from 'src/app/services/shared.service';
 })
 export class PersonaComponent implements OnInit {
 
-  constructor(private authS: AuthService, private service:SharedService) { }
+  constructor(private authS: AuthService, private service:SharedService, private router: Router) { }
 
   @Input() per:any;
   cod_per:string;
   ced_per:string;
   nom_per:string;
   fna_per:string;
-  usu_per:string;
   pas_per:string;
   ema_per:string;
   dir_per:string;
@@ -33,7 +32,6 @@ export class PersonaComponent implements OnInit {
       ced_per:"",
       nom_per:"",
       fna_per:"",
-      usu_per:"",
       pas_per:"",
       ema_per:"",
       dir_per:"",
@@ -45,7 +43,6 @@ export class PersonaComponent implements OnInit {
     this.ced_per=this.per.ced_per;
     this.nom_per=this.per.nom_per;
     this.fna_per=this.per.fna_per;
-    this.usu_per=this.per.usu_per;
     this.pas_per=this.per.pas_per;
     this.ema_per=this.per.ema_per;
     this.dir_per=this.per.dir_per;
@@ -59,13 +56,13 @@ export class PersonaComponent implements OnInit {
               ced_per:this.ced_per,
               nom_per:this.nom_per,
               fna_per:this.fna_per,
-              usu_per:this.usu_per,
               pas_per:this.pas_per,
               ema_per:this.ema_per,
               dir_per:this.dir_per,
               fk_perrol:this.fk_perrol,
               fk_perest:this.fk_perest};
       this.service.addPersona(val).subscribe(res=>{
+        alert("Registro exitoso");
         
         this.onRegister();
         this.clear();
@@ -79,7 +76,7 @@ export class PersonaComponent implements OnInit {
     var firepassword  = this.pas_per;
     try {
       const user = await this.authS.register(fireemail, firepassword);
-
+      this.router.navigate(['index']);
     } catch (error) {
       console.log(error);
     }
@@ -90,7 +87,6 @@ export class PersonaComponent implements OnInit {
     this.ced_per="";
     this.nom_per="";
     this.fna_per="";
-    this.usu_per="";
     this.pas_per="";
     this.ema_per="";
     this.dir_per="";
