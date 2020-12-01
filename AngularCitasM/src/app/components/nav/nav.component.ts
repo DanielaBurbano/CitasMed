@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { Observable } from 'rxjs';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-nav',
@@ -16,7 +17,7 @@ export class NavComponent implements OnInit {
   constructor(private authS: AuthService, private router: Router) { }
 
   async ngOnInit() {
-  
+
   }
 
   async onLogout(){

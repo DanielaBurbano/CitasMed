@@ -1,7 +1,6 @@
 #slide{
     margin-top: 50px;
-    background: #333;
-    color: #fff;
+    color: black;
     text-align: center;
     padding: 20px;
   }
@@ -23,7 +22,7 @@
     display: flex;
     padding: 0;
     width: 400%;
-    animation: cambio 20s infinite;
+    animation: cambio 10s infinite;
   }
   
   .slide li{
@@ -35,6 +34,24 @@
       margin-top: 5px;
       height: 90%;
       width: 100%;
+  }
+
+  .contDoc{
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .datosDoc{
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .imgDoc{
+    width: 150px;
+    height: 100px;
   }
   
   @keyframes cambio{

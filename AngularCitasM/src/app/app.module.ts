@@ -26,6 +26,7 @@ import { AdminCitasComponent } from './components/cita/admin-citas/admin-citas.c
 import { DocCitasComponent } from './components/cita/doc-citas/doc-citas.component';
 import { EditCitComponent } from './components/cita/edit-cit/edit-cit.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { EditCitComponent } from './components/cita/edit-cit/edit-cit.component'
     AdminCitasComponent,
     DocCitasComponent,
     EditCitComponent
+
   ],
   imports: [
     BrowserModule,

@@ -3,15 +3,23 @@
         <div class="slide">
           <div>
               <ul>
-                <li><img src="../../assets/imagen1.png"></li>
                 <li><img src="../../assets/slide1.png"></li>
-                <li><img src="../../assets/imagen1.png"></li>
+                <li><img src="../../assets/slide2.png"></li>
                 <li><img src="../../assets/slide1.png"></li>
+                <li><img src="../../assets/slide2.png"></li>
               </ul>
           </div>
           <div>
-          <h2>Nuestro doctores</h2>
+            <h2>Nuestro doctores</h2>
           </div>
-        </div>        
+          <div *ngIf="cantidad > 0" class="contDoc">
+            
+            <div class="datosDoc" *ngFor="let dataItem of DoctoresList">
+              <img src="../../assets/doctor.png" class="imgDoc">
+              <h3>{{dataItem.fk_docper.nom_per}}</h3>
+            </div>
+          </div> 
+        </div>  
+             
     </div>
 </section>
