@@ -34,7 +34,8 @@
       <label>Estado</label>
       <select class="form-control" [(ngModel)]="fk_perest">
         <option value="0">Seleccione</option>
-        <option *ngFor="let dataItem of EstadoList" value="{{dataItem.cod_est}}">{{dataItem.des_est}}</option>
+        <option  value="1">Activo</option>
+        <option  value="2">Desactivado</option>
       </select>
     </div>
 </div>

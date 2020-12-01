@@ -40,7 +40,8 @@ export class RolComponent implements OnInit {
   deleteClick(item){
     if(confirm('¿Estas seguro?')){
       this.service.deleteRol(item.cod_rol).subscribe(data=>{
-        alert(data.toString());
+        //alert(data.toString());
+        alert("Rol eliminado con exito");
         this.refreshRolList();
       })
     }

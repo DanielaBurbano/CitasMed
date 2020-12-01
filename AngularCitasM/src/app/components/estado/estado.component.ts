@@ -40,7 +40,8 @@ export class EstadoComponent implements OnInit {
   deleteClick(item){
     if(confirm('¿Estas seguro?')){
       this.service.deleteEstado(item.cod_est).subscribe(data=>{
-        alert(data.toString());
+        //alert(data.toString());
+        alert("eliminado con exito");
         this.refreshEstadoList();
       })
     }
