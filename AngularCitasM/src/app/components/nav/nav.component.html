@@ -12,6 +12,7 @@
         <a class="nav-link" [routerLink]="['admin-cit']" *ngIf="user">Citas</a>
         <a class="nav-link" [routerLink]="['doc_cit']" *ngIf="user">Citas agendadas</a>
         <a class="nav-link" [routerLink]="['citas']" *ngIf="user">Mis Citas</a>
+        <a class="nav-link" [routerLink]="['admin-per']" *ngIf="user">Personas</a>
         <a class="nav-link"  *ngIf="user">{{user?.email}}</a>
         <a class="nav-link" href="#" (click)="onLogout()" *ngIf="user">Logout</a>
       </ul>

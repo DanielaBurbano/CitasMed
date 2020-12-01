@@ -8,12 +8,12 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
-readonly APIUrl = "http://127.0.0.1:8000";
+readonly APIUrl = "http://127.0.0.1:8000";//Ruta django
 
 constructor(private http:HttpClient) { }
 
-  getRolList():Observable<any[]>{
-    return this.http.get<any[]>(this.APIUrl + '/rol/');
+  getRolList():Observable<any[]>{//metodos para usar en el front-end
+    return this.http.get<any[]>(this.APIUrl + '/rol/');//ruta de django que se va a consumir
   }
 
   addRol(val:any){
