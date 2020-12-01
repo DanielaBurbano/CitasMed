@@ -12,6 +12,7 @@ export class AuthService {
   async login(email:string, password:string){
     try{
       const result = await this.afAuth.signInWithEmailAndPassword(email, password);
+      localStorage.setItem("email", email);
       return result;
     }catch(error){
       console.log(error);

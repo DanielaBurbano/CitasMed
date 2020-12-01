@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from .models import Roles, Estados, Personas, Doctores
+from .models import Roles, Estados, Personas, Doctores, Citas
 
 class RolSerializer(serializers.ModelSerializer):
     class Meta:
@@ -34,3 +34,16 @@ class DoctoresSerializer(ModelSerializer):
     class Meta:
         model = Doctores
         fields = ('cod_doc', 'fk_docper')
+
+class CitaSerializer(ModelSerializer):
+    class Meta:
+        model = Citas
+        fields = ('cod_cit', 'fec_cit', 'hor_cit',  'obs_cit', 'fk_citper', 'fk_citdoc', 'fk_citest')
+
+class CitasSerializer(ModelSerializer):
+    fk_citper = PersonasSerializer(many=False, read_only=True)
+    fk_citdoc = DoctoresSerializer(many=False, read_only=True)
+    fk_citest = EstadoSerializer(many=False, read_only=True)
+    class Meta:
+        model = Citas
+        fields = ('cod_cit', 'fec_cit', 'hor_cit', 'obs_cit', 'fk_citper', 'fk_citdoc', 'fk_citest')

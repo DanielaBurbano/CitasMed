@@ -1,0 +1,36 @@
+<div class="FormPer">
+    <div class="DatosForm">
+      <label>Fecha</label>
+      <input type="date" class="form-control" [(ngModel)]="fec_cit" readonly>
+    </div>
+    <div class="DatosForm">
+      <label>Hora</label>
+      <input type="time" class="form-control" [(ngModel)]="hor_cit" readonly>
+    </div>
+    <div class="DatosForm">
+      <label>Paciente</label>
+      <input type="text" class="form-control" [(ngModel)]="fk_citper" readonly>
+      <input type="text" class="form-control oculto" [(ngModel)]="cfk_citper" readonly>
+    </div>
+    <div class="DatosForm">
+      <label>Doctor</label>
+      <input type="text" class="form-control" [(ngModel)]="fk_citdoc" readonly>
+      <input type="text" class="form-control oculto" [(ngModel)]="cfk_citdoc" readonly>
+    </div>
+    <div class="DatosForm">
+      <label>Observaciones</label>
+      <textarea  type="text" class="form-control" placeholder="¿Alguna observacion?" [(ngModel)]="obs_cit"></textarea >
+    </div>
+    <div class="DatosForm">
+      <label>Estado</label>
+      <select class="form-control" [(ngModel)]="fk_citest">
+        <option value="0">Seleccione</option>
+        <option value="3">Atendida</option>
+        <option value="4">Pendiente</option>
+      </select>
+    </div>
+</div>
+
+<button (click)="updateCita()" *ngIf="cit.cod_cit!=0" class="btn btn-primary">
+    Actualizar
+</button>

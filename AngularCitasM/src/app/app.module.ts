@@ -21,6 +21,10 @@ import { SharedService } from './services/shared.service';
 import { AdminPerComponent } from './components/persona/admin-per/admin-per.component';
 import { IndexComponent } from './components/index/index.component';
 import { EditPerComponent } from './components/persona/edit-per/edit-per.component';
+import { CitaComponent } from './components/cita/cita.component';
+import { AdminCitasComponent } from './components/cita/admin-citas/admin-citas.component';
+import { DocCitasComponent } from './components/cita/doc-citas/doc-citas.component';
+import { EditCitComponent } from './components/cita/edit-cit/edit-cit.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { EditPerComponent } from './components/persona/edit-per/edit-per.compone
     AddEditEstadoComponent,
     AdminPerComponent,
     IndexComponent,
-    EditPerComponent
+    EditPerComponent,
+    CitaComponent,
+    AdminCitasComponent,
+    DocCitasComponent,
+    EditCitComponent
   ],
   imports: [
     BrowserModule,

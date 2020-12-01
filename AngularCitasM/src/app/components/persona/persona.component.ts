@@ -10,7 +10,7 @@ import { SharedService } from 'src/app/services/shared.service';
 })
 export class PersonaComponent implements OnInit {
 
-  constructor(private authS: AuthService, private service:SharedService, private router: Router) { }
+  constructor(private authS: AuthService, private service:SharedService) { }
 
   @Input() per:any;
   cod_per:string;

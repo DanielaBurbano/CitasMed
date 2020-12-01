@@ -9,6 +9,9 @@ router.register('persona', viewset=views.PersonaViewset)
 router.register('personas', viewset=views.PersonasViewset)
 router.register('doctor', viewset=views.DoctorViewset)
 router.register('doctores', viewset=views.DoctoresViewset)
+router.register('cita', viewset=views.CitaViewset)
+router.register('citas', viewset=views.CitasViewset)
+
 
 urlpatterns = [
     path('', include(router.urls))
