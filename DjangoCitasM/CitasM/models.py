@@ -23,3 +23,12 @@ class Personas(models.Model):
 class Doctores(models.Model):
     cod_doc = models.CharField(max_length=100, primary_key=True)
     fk_docper = models.ForeignKey(Personas, on_delete=models.CASCADE)
+
+class Citas(models.Model):
+    cod_cit = models.AutoField(primary_key=True)
+    fec_cit = models.DateField()
+    hor_cit = models.CharField(max_length=100)
+    obs_cit = models.CharField(max_length=100)
+    fk_citper = models.ForeignKey(Personas, on_delete=models.CASCADE)
+    fk_citdoc = models.ForeignKey(Doctores, on_delete=models.CASCADE)
+    fk_citest = models.ForeignKey(Estados, on_delete=models.CASCADE)

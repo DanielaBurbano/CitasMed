@@ -1,0 +1,28 @@
+<section>
+    <h1>Historial de citas</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Codigo cita</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Paciente</th>
+                <th>Doctor</th>
+                <th>Observaciones</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dataItem of CitaList">
+                <td>{{dataItem.cod_cit}}</td>
+                <td>{{dataItem.fec_cit}}</td>
+                <td>{{dataItem.hor_cit}}</td>
+                <td>{{dataItem.fk_citper.nom_per}}</td>
+                <td>{{dataItem.fk_citdoc.fk_docper.nom_per}}</td>
+                <td>{{dataItem.obs_cit}}</td>
+                <td *ngIf="dataItem.fk_citest.cod_est == '3' "><button class="btn btn-success">{{dataItem.fk_citest.des_est}}</button></td>
+                <td *ngIf="dataItem.fk_citest.cod_est == '4' "><button class="btn btn-danger">{{dataItem.fk_citest.des_est}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

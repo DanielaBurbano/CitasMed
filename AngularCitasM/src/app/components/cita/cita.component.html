@@ -1,0 +1,58 @@
+<section>
+
+    <h1>Agenda tu cita ¡Ya!</h1>
+    <div class="FormPer">
+      <div class="DatosForm">
+        <label>Paciente</label>
+        <select class="form-control"  [(ngModel)]="fk_citper" readonly id="cper">
+            <option *ngFor="let dataItem of PersonaList; let index = index"   value="{{dataItem.cod_per}}" [selected]="index == 0">{{dataItem.nom_per}}</option>
+        </select>
+      </div>
+      <div class="DatosForm">
+        <label>Fecha</label>
+        <input type="date" class="form-control" [(ngModel)]="fec_cit">
+      </div>
+      <div class="DatosForm">
+        <label>Hora</label>
+        <input type="time" class="form-control" [(ngModel)]="hor_cit">
+      </div>
+      <div class="DatosForm">
+        <label>Doctor</label>
+        <select class="form-control btng"  [(ngModel)]="fk_citdoc">
+            <option value="0">Seleccione</option>
+            <option *ngFor="let dataItem of DoctorList" value="{{dataItem.fk_docper.ced_per}}">{{dataItem.fk_docper.nom_per}}</option>
+        </select>
+      </div>
+    </div>
+    
+    <button (click)="addCita()" class="btn btn-primary Btnadd">Agregar</button>
+
+
+    <h1>Mi historial de citas</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Codigo cita</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Paciente</th>
+                <th>Doctor</th>
+                <th>Observaciones</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dataItem of CitaList">
+                <td>{{dataItem.cod_cit}}</td>
+                <td>{{dataItem.fec_cit}}</td>
+                <td>{{dataItem.hor_cit}}</td>
+                <td>{{dataItem.fk_citper.nom_per}}</td>
+                <td>{{dataItem.fk_citdoc.fk_docper.nom_per}}</td>
+                <td>{{dataItem.obs_cit}}</td>
+                <td *ngIf="dataItem.fk_citest.cod_est == '3' "><button class="btn btn-success">{{dataItem.fk_citest.des_est}}</button></td>
+                <td *ngIf="dataItem.fk_citest.cod_est == '4' "><button class="btn btn-danger">{{dataItem.fk_citest.des_est}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+   
+  </section>
